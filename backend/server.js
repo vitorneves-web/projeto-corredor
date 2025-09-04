@@ -39,6 +39,12 @@ const startServer = async () => {
     const client = new MercadoPagoConfig({ accessToken: process.env.ACCESS_TOKEN });
     const payment = new Payment(client);
 
+    // Rota de teste
+    app.get("/", (req, res) => {
+        res.send("Back-end rodando normalmente ✅");
+    });
+
+
     // Criar pagamento Pix
     app.post("/criar-pagamento", async (req, res) => {
       try {
