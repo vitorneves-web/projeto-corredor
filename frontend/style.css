@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+:root {
+    --corBranca: #ffffff;
+    --corLaranja: #FF7903;
+    --cor2: #FF4655;
+    --corCinza: #C0C0C1;
+    --corCinzaClaro: #303030;
+    --corCinzaMedio: #212121;
+    --corCinzaEscuro: #181818;
+
+    --fonte-padrao: 'Roboto', sans-serif;
+    --fonte-destaque: 'Poppins', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--corCinzaMedio);
+    font-family: var(--fonte-padrao);
+    color: var(--corBranca);
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-destaque);
+    color: var(--corLaranja);
+    font-size: 2.2rem;
+}
+
+.interface {
+    max-width: 1380px;
+    padding: 0 4%;
+    margin: 0 auto;
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid var(--corBranca);
+    border-radius: 8px;
+    color: var(--corBranca);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: .5s;
+}
+
+button:hover {
+    background-color: var(--corCinzaClaro);
+    color: var(--corLaranja);
+}
+
+/* Estilo do cabeçalho */
+
+header {
+    background-color: var(--corCinzaEscuro);
+    padding: 12px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logotipo-cabecalho img{
+    max-width: 70px;
+    border-radius: 50%;
+}
+
+header nav.menu-desktop ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 56px;
+}
+
+header nav.menu-desktop a {
+    color: var(--corBranca);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color .5s;
+}
+
+header nav.menu-desktop a:hover {
+    color: var(--corLaranja);
+}
+
+header nav.menu-desktop button {
+    width: 134px;
+    height: 44px;
+}
+
+/* Estilo do Inscrições */
+
+section.inscricoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    padding-top: 144px;
+}
+
+section.inscricoes h1 {
+    padding-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.inscricoes > .interface {
+    max-width: 500px;
+    width: 100%;
+    background: var(--corCinzaClaro);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px 0px #202020;
+}
+
+#form-checkout {
+    display: flex;
+    flex-direction: column; /* coloca label e input em coluna */
+    gap: 15px; /* espaçamento entre os blocos */
+}
+
+#form-checkout label {
+    color: var(--corCinza);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#form-checkout input {
+    color: var(--corCinzaEscuro);
+    background-color: var(--corBranca);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#form-checkout button {
+    background-color: var(--corCinzaMedio);
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--corBranca);
+    border: 1px solid var(--corCinzaClaro);
+}
+
+#form-checkout button:hover {
+    background-color: var(--corCinzaEscuro);
+    color: var(--corLaranja);
+}
+
+/* Estilo dos Pagamentos */
+
+.pagamentos {
+    display: none;
+}
+
+.pagamentos > .interface {
+    display: flex;
+}
+
+#qrCodeContainer {
+  width: 50%;
+}
+
+.txt-copia-e-cola {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+}
+
+#pixCode {
+  width: 70%;
+  height: 40px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+#qrCode {
+  max-width: 240px;
+  padding: 16px 0;
+}
+
+#txt-pix {
+  color: var(--corCinza);
+  font-weight: bold;
+  padding-bottom: 16px;
+}
+
+.btn-copiar {
+  width: 200px;
+  height: 50px;
+}
+
+
+/* Estilo do divisor */
+.divisor {
+    width: 70%;
+    border: 1px solid #FF7903;
+    margin: 50px auto 110px auto;
+}
+/* Estilo do Sobre nós */
+
+.sobre-nos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobre-nos .sobre-nos-txt {
+    max-width: 700px;
+    padding: 0 0 60px 0;
+}
+
+.sobre-nos p {
+    text-align: justify;
+    line-height: 1.6;
+    max-width: 400px;
+    text-indent: 2rem;
+    padding-top: 24px;
+
+}
+
+.sobre-nos > .interface {
+    max-width: 970px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 26px;
+    margin: 24px auto;
+    align-items: center;
+}
+
+.sobre-nos > .interface img {
+    max-width: 400px;
+}
+
+/* Estilo do Contato */
+
+.contato > .interface {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contato .txt-contato p {
+    color: var(--corCinza);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.contato .txt-contato p i {
+    color: var(--corAmarela);
+    font-size: 2rem;
+}
+
+.btn-grupo {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.btn-grupo button {
+    width: 268px;
+    height: 60px;
+}
+
+/* Estilo do footer */
+
+footer {
+    padding: 20px 0;
+    background-color: var(--corCinzaEscuro);
+}
+
+footer > .interface {
+    display: flex;
+    justify-content: space-between;
+    color: var(--corBranca);
+}
+
+footer .logo-footer img{
+    max-width: 70px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+footer .btn-redes button {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-right: 8px;
+}
